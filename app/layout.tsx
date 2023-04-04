@@ -6,16 +6,17 @@ export const metadata = {
 }
 
 const font = Nunito({
-  subsets:["latin"],
+  subsets:["latin"]
 })
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  // console.log("children is ======>" , children.props.childProp)
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   )
 }

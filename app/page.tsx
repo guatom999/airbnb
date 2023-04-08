@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <div>Helllo World</div>
+    <div className="text-2xl">Helllo World</div>
   )
 }

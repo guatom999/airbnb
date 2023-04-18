@@ -1,6 +1,10 @@
 import { Nunito } from "next/font/google"
 import './globals.css'
 import Navbar from "./components/navbar/Navbar"
+import Modal from "./components/modals/Modal"
+import ClinetOnly from "./components/ClientOnly"
+import Button from "./components/Button/Button"
+
 
 export const metadata = {
   title: 'AirBnb',
@@ -8,7 +12,7 @@ export const metadata = {
 }
 
 const font = Nunito({
-  subsets:["latin"]
+  subsets: ["latin"]
 })
 export default function RootLayout({
   children,
@@ -19,9 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar></Navbar>
-        {children}
-        </body>
+        <ClinetOnly>
+          {/* <Modal isOpen={true} /> */}
+          {/* <Navbar /> */}
+          <Button className="" full={false} text="chon"/>
+          {children}
+          {/* คืออะไรหว่า children */}
+        </ClinetOnly>
+      </body>
     </html>
   )
 }

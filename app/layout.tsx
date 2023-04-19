@@ -3,7 +3,8 @@ import './globals.css'
 import Navbar from "./components/navbar/Navbar"
 import Modal from "./components/modals/Modal"
 import ClinetOnly from "./components/ClientOnly"
-import Button from "./components/Button/Button"
+import RegisterModal from "./components/modals/RegisterModal"
+// import Button from "./components/Button/Button"
 
 
 export const metadata = {
@@ -24,9 +25,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ClinetOnly>
-          {/* <Modal isOpen={true} /> */}
-          {/* <Navbar /> */}
-          <Button className="" full={false} text="chon"/>
+          <Navbar />
+          <RegisterModal/>
+          {/* <Modal
+            actionLabel="Submit"
+            title="Hello world"
+            isOpen={true} /> */}
+          {/* <Button className="" full={false} text="chon"/> */}
           {children}
           {/* คืออะไรหว่า children */}
         </ClinetOnly>

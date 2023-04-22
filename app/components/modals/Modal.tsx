@@ -49,7 +49,9 @@ const Modal: React.FC<ModalProps> = ({
         if (disabled) {
             return;
         }
-    }, [])
+
+        onSubmit()
+    }, [onSubmit, disabled])
 
     const handleSecondaryAction = useCallback(() => {
         if (disabled || !secondaryAction) {
@@ -183,6 +185,7 @@ const Modal: React.FC<ModalProps> = ({
                                     // outline label="My Button" 
                                     />
                                 </div>
+                                {footer}
                             </div>
                         </div>
                     </div>

@@ -12,7 +12,6 @@ const UserMenu = () => {
 
     const toggleOpen = useCallback(() => {
         setIsOpen((value) => !value)
-        console.log("isOpen is =====>", isOpen)
     }, [])
     return (
         <div className="relative">
